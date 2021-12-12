@@ -1,11 +1,10 @@
-import react, { createRef } from "react";
-import { useState, useEffect, useRef } from "react";
+import { createRef } from "react";
+import { useState, useEffect } from "react";
 import MessageUnit from "./messageUnite";
 import axios from "axios";
 
 const DiscussionContent = (props) => {
     const messagesEndRef = createRef(null);
-    const [user, setUser] = useState(props.user);
     const [data, setData] = useState(props.data);
     const [message, setMessage] = useState();
     const scrollToBottom = () => {
