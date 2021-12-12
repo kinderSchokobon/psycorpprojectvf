@@ -5,11 +5,8 @@ import axios from "axios";
 
 const DiscussionContent = (props) => {
     const messagesEndRef = createRef(null);
-    const [data, setData] = useState(props.data);
+    const data = props.data;
     const [message, setMessage] = useState();
-    const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-    }
     useEffect(() => {
         if (messagesEndRef.current) {
           messagesEndRef.current.scrollIntoView(
