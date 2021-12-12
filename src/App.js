@@ -1,10 +1,9 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import React, { createContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HomePage from "./components/homepage";
 import Navbar from "./components/navbar";
 import SignIn from "./components/signin";
-import {ThemeContext, themes} from './components/themeContext';
 import Cache from "./components/cache";
 import Messages from "./components/messages";
 import Logout from './components/logout';
@@ -23,7 +22,6 @@ function App() {
   useEffect(() => {
     console.log("a new name has been created")
   }, [user]);
-  const [data, setData] = useState();
   console.log("refresh")
   return (
     <div className="App bg-dark">
